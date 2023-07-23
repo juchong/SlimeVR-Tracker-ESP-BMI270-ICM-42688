@@ -76,7 +76,7 @@ private:
     VectorInt16 rawAccel{};
     Quat correction{0, 0, 0, 0};
     
-    SlimeVR::Configuration::MPU9250CalibrationConfig m_Calibration;
+    SlimeVR::Configuration::MPU9250CalibrationConfig m_Calibration = {};
 
     // outputs to respective member variables
     void parseAccelData(int16_t data[3]);
