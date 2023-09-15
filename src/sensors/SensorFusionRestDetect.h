@@ -39,8 +39,8 @@ namespace SlimeVR
             bool getRestDetected();
 
             #if !SENSOR_WITH_REST_DETECT
-                void updateAcc(sensor_real_t Axyz[3], sensor_real_t deltat);
-                void updateGyro(sensor_real_t Gxyz[3], sensor_real_t deltat);
+                void updateAcc(const sensor_real_t Axyz[3], const sensor_real_t deltat);
+                void updateGyro(const sensor_real_t Gxyz[3], const sensor_real_t deltat);
             #endif
         protected:
             #if !SENSOR_WITH_REST_DETECT

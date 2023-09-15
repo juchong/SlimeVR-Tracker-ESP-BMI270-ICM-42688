@@ -4,7 +4,7 @@ namespace SlimeVR
 {
     namespace Sensors
     {
-        void SensorFusionRestDetect::updateAcc(sensor_real_t Axyz[3], sensor_real_t deltat)
+        void SensorFusionRestDetect::updateAcc(const sensor_real_t Axyz[3], sensor_real_t deltat)
         {
             #if !SENSOR_WITH_REST_DETECT
                 if (deltat < 0) deltat = accTs;
@@ -13,7 +13,7 @@ namespace SlimeVR
             SensorFusion::updateAcc(Axyz, deltat);
         }
 
-        void SensorFusionRestDetect::updateGyro(sensor_real_t Gxyz[3], sensor_real_t deltat)
+        void SensorFusionRestDetect::updateGyro(const sensor_real_t Gxyz[3], sensor_real_t deltat)
         {
             #if !SENSOR_WITH_REST_DETECT
                 if (deltat < 0) deltat = accTs;
